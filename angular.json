@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Bobs-Computer": {
+    "Bobs-Computer-Repair": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Bobs-Computer",
+            "outputPath": "dist/Bobs-Computer-Repair",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -34,7 +34,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Bobs-Computer:build:production"
+              "browserTarget": "Bobs-Computer-Repair:build:production"
             },
             "development": {
-              "browserTarget": "Bobs-Computer:build:development"
+              "browserTarget": "Bobs-Computer-Repair:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Bobs-Computer:build"
+            "browserTarget": "Bobs-Computer-Repair:build"
           }
         },
         "test": {
@@ -99,5 +99,5 @@
       }
     }
   },
-  "defaultProject": "Bobs-Computer"
+  "defaultProject": "Bobs-Computer-Repair"
 }
