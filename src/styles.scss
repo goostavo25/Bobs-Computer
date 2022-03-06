@@ -1,0 +1,20 @@
+/*
+========================================================
+; Title: Assignment 9.3 - Bob's Computer Repair Shop
+; Author: Gustavo Roo Gonzalez
+; Date: 05 March 2022
+; Description: Bob's Computer Repair Shop with Angular
+========================================================
+*/
+
+@import "./theme";
+
+html,
+body {
+  height: 100%;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

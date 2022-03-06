@@ -1,0 +1,39 @@
+<!--/*
+========================================================
+; Title: Assignment 9.3 - Bob's Computer Repair Shop
+; Author: Gustavo Roo Gonzalez
+; Date: 05 March 2022
+; Description: Bob's Computer Repair Shop with Angular
+========================================================
+*/-->
+
+<h1 mat-dialog-title>Invoice</h1>
+<mat-dialog-content>
+  <div>
+    <strong>Selected Services:</strong>
+    <div *ngFor="let item of bill.shopItems">
+      &nbsp; {{ item.title }} ({{ item.amount | currency }})
+    </div>
+    <hr />
+    <strong>Subtotal:</strong>
+    <p>&nbsp; {{ bill.getShopTotal() | currency }}</p>
+  </div>
+  <br />
+  <strong>Additional Fees:</strong>
+  <p>
+    &nbsp; Part Costs: {{ bill.getPartsAmount() | currency }}
+    <br />
+    &nbsp; Labor Costs: {{ bill.getLaborAmount() | currency }}
+  </p>
+  <hr />
+  <strong>Invoice Total:</strong>
+  <p>&nbsp; {{ bill.getBillTotal() | currency }}</p>
+</mat-dialog-content>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button matDialogClose="cancel" color="primary">
+    Cancel Order
+  </button>
+  <button mat-raised-button matDialogClose="confirm" color="primary">
+    Confirm Order
+  </button>
+</div>
